@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">WeatherInformation</string>
+    <string name="drawer_home">Home Screen</string>
+    <string name="menu_search">Search</string>
 </resources>
