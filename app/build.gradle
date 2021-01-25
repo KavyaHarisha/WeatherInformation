@@ -69,4 +69,16 @@ dependencies {
     //For Hilt support for ViewModel
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02'
     kapt 'androidx.hilt:hilt-compiler:1.0.0-alpha02'
+
+    //Room
+    def room_version = "2.2.6"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    testImplementation "com.squareup.retrofit2:retrofit:2.9.0"
+    testImplementation "com.squareup.retrofit2:converter-gson:2.9.0"
 }
