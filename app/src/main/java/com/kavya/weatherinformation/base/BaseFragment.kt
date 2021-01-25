@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
+import androidx.navigation.Navigation
 
 abstract class BaseFragment<VM : ViewModel, DB : ViewDataBinding>(@LayoutRes val layout: Int) : Fragment() {
 
@@ -32,6 +33,12 @@ abstract class BaseFragment<VM : ViewModel, DB : ViewDataBinding>(@LayoutRes val
         init()
         super.onCreateView(inflater, container, savedInstanceState)
         return binding.root
+    }
+
+    open fun navigate(action: Int) {
+        view?.let { _view ->
+            Navigation.findNavController(_view).navigate(action)
+        }
     }
 
 }

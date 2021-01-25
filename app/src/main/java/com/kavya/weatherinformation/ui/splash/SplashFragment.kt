@@ -1,6 +1,8 @@
 package com.kavya.weatherinformation.ui.splash
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
@@ -20,5 +22,9 @@ class SplashFragment :
         Glide.with(this)
             .load(GIF_IMG_URL)
             .into(binding.splashImage)
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            navigate(R.id.action_splashFragment_to_searchCurrentWeatherFragment)
+        }, 3000)
     }
 }

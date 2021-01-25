@@ -2,4 +2,7 @@
     <string name="app_name">WeatherInformation</string>
     <string name="drawer_home">Home Screen</string>
     <string name="menu_search">Search</string>
+    <string name="search_hint">Start typing for find your location…</string>
+    <string name="text_no_connectivity">No Connection</string>
+    <string name="text_connectivity">Back Online</string>
 </resources>
