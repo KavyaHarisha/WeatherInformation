@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/splashFragment">
     <fragment
@@ -10,6 +11,12 @@
         <action
             android:id="@+id/action_splashFragment_to_searchCurrentWeatherFragment"
             app:destination="@id/searchCurrentWeatherFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/splashFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashFragment_to_homeScreenFragment3"
+            app:destination="@id/homeScreenFragment3"
             app:launchSingleTop="true"
             app:popUpTo="@+id/splashFragment"
             app:popUpToInclusive="true"/>
@@ -28,5 +35,28 @@
     <fragment
         android:id="@+id/cityScreenFragment"
         android:name="com.kavya.weatherinformation.ui.dashboard.CityScreenFragment"
-        android:label="CityScreenFragment" />
+        android:label="CityScreenFragment" >
+        <action
+            android:id="@+id/action_cityScreenFragment_to_homeScreenFragment3"
+            app:destination="@id/homeScreenFragment3"
+            app:popUpTo="@+id/cityScreenFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_cityScreenFragment_to_searchCurrentWeatherFragment"
+            app:destination="@id/searchCurrentWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreenFragment3"
+        android:name="com.kavya.weatherinformation.ui.home.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment3_to_cityScreenFragment"
+            app:destination="@id/cityScreenFragment"
+            app:popUpTo="@+id/homeScreenFragment3"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_homeScreenFragment3_to_searchCurrentWeatherFragment"
+            app:destination="@id/searchCurrentWeatherFragment" />
+    </fragment>
 </navigation>

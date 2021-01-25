@@ -4,7 +4,14 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/homeScreenFragment"
+            android:id="@+id/homeScreenFragment3"
             android:title="@string/drawer_home" />
     </group>
+    <item android:title="@string/more">
+        <menu>
+            <item
+                android:id="@+id/aboutApp"
+                android:title="@string/about_app" />
+        </menu>
+    </item>
 </menu>

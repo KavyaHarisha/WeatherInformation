@@ -7,4 +7,9 @@
     <string name="text_connectivity">Back Online</string>
     <string name="today">Today</string>
     <string name="city_humidity">Humidity</string>
+    <string name="position" translatable="false">position</string>
+    <string name="home_city_name">City name : %s</string>
+    <string name="home_city_temp">Temperature : %s</string>
+    <string name="more">More</string>
+    <string name="about_app">About app</string>
 </resources>

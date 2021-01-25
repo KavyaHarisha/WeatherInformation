@@ -42,4 +42,15 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <style name="HomeRowStyle">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="HomeListRecyclerStyle">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:paddingTop">4dp</item>
+    </style>
+
 </resources>

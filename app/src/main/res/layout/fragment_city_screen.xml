@@ -20,6 +20,18 @@
         android:textColor="@color/black"
         app:chipBackgroundColor="@color/white" />
 
+    <ImageView
+        android:id="@+id/city_book_mark_img"
+        android:layout_width="@dimen/dimen_50"
+        android:layout_height="@dimen/dimen_50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginRight="@dimen/dimen_16"
+        android:layout_marginEnd="@dimen/dimen_16"
+        app:tint="@color/white"
+        tools:src="@drawable/ic_menu"/>
+
     <include
         android:id="@+id/container_city"
         layout="@layout/layout_city_info"

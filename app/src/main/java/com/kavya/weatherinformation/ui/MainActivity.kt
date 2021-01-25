@@ -38,10 +38,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menuItemSearch -> {
+                findNavController(R.id.nav_host_fragment).navigate(R.id.searchCurrentWeatherFragment)
+                true
+            }
+            else -> false
+        }
+    }
+
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     private fun showToolbar() {
         val appBarConfig = AppBarConfiguration(
-            setOf(R.id.homeScreenFragment),
+            setOf(R.id.homeScreenFragment3),
             binding.drawerLayout
         )
         val navController = findNavController(R.id.nav_host_fragment)
@@ -55,7 +65,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 R.id.splashFragment,R.id.searchCurrentWeatherFragment -> {
                     binding.toolbar.visibility = View.GONE
                 }
-                R.id.cityScreenFragment -> {
+                R.id.cityScreenFragment,R.id.homeScreenFragment3 -> {
                     binding.toolbar.visibility = View.VISIBLE
                 }
             }
