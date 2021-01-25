@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ConstraintMatchMatchStyle"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageViewGithub"
+        android:layout_width="@dimen/dimen_75"
+        android:layout_height="@dimen/dimen_75"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:background="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textViewAppName"
+        style="@style/ConstraintWrapWrapStyle"
+        android:layout_below="@id/imageViewGithub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewGithub"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/city_weather_info_txt_size_24"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewAboutApp"
+        style="@style/ConstraintWrapWrapStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewAppName"
+        android:layout_margin="@dimen/dimen_24"
+        android:gravity="center"
+        android:text="@string/about_app_full_text"
+        android:textColor="@color/purple_200" />
+
+        <ImageView
+            android:id="@+id/git_hub_img"
+            android:layout_width="@dimen/dimen_32"
+            android:layout_height="@dimen/dimen_32"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAboutApp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="@fraction/fraction_03"
+            android:src="@drawable/ic_github" />
+
+        <TextView
+            android:id="@+id/git_hub_txt"
+            style="@style/ConstraintWrapWrapStyle"
+            android:padding="@dimen/dimen_12"
+            app:layout_constraintStart_toEndOf="@id/git_hub_img"
+            app:layout_constraintTop_toTopOf="@id/git_hub_img"
+            app:layout_constraintBottom_toBottomOf="@id/git_hub_img"
+            android:text="@string/see_on_github"
+            android:textColor="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

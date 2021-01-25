@@ -12,4 +12,7 @@
     <string name="home_city_temp">Temperature : %s</string>
     <string name="more">More</string>
     <string name="about_app">About app</string>
+    <string name="see_on_github">See on Github</string>
+    <string name="github_url">https://github.com/KavyaHarisha/WeatherInformation</string>
+    <string name="about_app_full_text">WeatherInformation is a simple forecast app, which uses some APIs to fetch current weather forecast data from the \'"https://openweathermap.org/api\'" and to fetch places,cities,counties,coords etc.. The main goal of this app is to be a sample of how to build an high quality Android application that uses the Architecture components, Hilt, Corotunies, Repository patter, Navigatin component etc. in Kotlin.</string>
 </resources>

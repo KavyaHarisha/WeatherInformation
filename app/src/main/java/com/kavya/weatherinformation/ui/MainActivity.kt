@@ -89,6 +89,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             android.R.id.home ->
                 binding.drawerLayout.openDrawer(GravityCompat.START)
+            R.id.aboutApp -> {
+                binding.drawerLayout.closeDrawer(GravityCompat.START)
+                findNavController(R.id.nav_host_fragment).navigate(R.id.githubDialog)
+            }
         }
         return item.onNavDestinationSelected(findNavController(R.id.nav_host_fragment)) || super.onOptionsItemSelected(
             item

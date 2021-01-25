@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="weatherData"
+            type="com.kavya.weatherinformation.ui.dashboard.WeatherData" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cardView"
+        style="@style/ConstraintMatchWrapStyle"
+        android:fitsSystemWindows="true"
+        app:cardCornerRadius="@dimen/dimen_24"
+        app:cardElevation="@dimen/dimen_8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rootView"
+            style="@style/ConstraintMatchWrapStyle">
+
+            <ImageView
+                android:id="@+id/imageViewWeatherIcon"
+                android:layout_width="@dimen/dimen_96"
+                android:layout_height="@dimen/dimen_96"
+                android:layout_marginLeft="@dimen/dimen_25"
+                android:layout_marginStart="@dimen/dimen_25"
+                android:layout_marginTop="@dimen/dimen_40"
+                app:setWeatherIcon="@{weatherData.weatherIcon}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/textViewTemperature"
+                app:layout_constraintEnd_toStartOf="@+id/textViewTemperature"
+                tools:src="@drawable/a10d_svg" />
+
+            <TextView
+                android:id="@+id/textViewTemperature"
+                style="@style/ConstraintWrapWrapStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:layout_marginRight="@dimen/dimen_30"
+                android:layout_marginEnd="@dimen/dimen_30"
+                android:text="@{weatherData.temp}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/city_temperature_txt_size"
+                tools:text="25°" />
+
+            <TextView
+                android:id="@+id/textViewWeatherMain"
+                style="@style/ConstraintWrapWrapStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTemperature"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:text="@{weatherData.weatherInfo}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/city_weather_info_txt_size_24"
+                tools:text="Clouds &amp; Sun" />
+
+            <TextView
+                android:id="@+id/textViewHumidityHeader"
+                style="@style/ConstraintWrapWrapStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewWeatherMain"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:text="@string/city_humidity"
+                android:textColor="@color/white"
+                android:textSize="@dimen/city_humidity_txt_heading_size_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHumidity"
+                style="@style/ConstraintWrapWrapStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewHumidityHeader"
+                android:layout_marginBottom="@dimen/dimen_24"
+                android:textColor="@color/whiteWithOpacity"
+                android:textSize="@dimen/city_humidity_text_size_27"
+                android:text="@{weatherData.humidity}"
+                tools:text="35°" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

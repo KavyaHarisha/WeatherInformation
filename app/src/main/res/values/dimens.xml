@@ -3,6 +3,7 @@
     <dimen name="dimen_0">0dp</dimen>
     <dimen name="dimen_1">1dp</dimen>
     <dimen name="dimen_4">4dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
     <dimen name="dimen_16">16dp</dimen>
     <dimen name="dimen_8">8dp</dimen>
     <dimen name="dimen_24">24dp</dimen>
@@ -11,6 +12,7 @@
     <dimen name="dimen_32">32dp</dimen>
     <dimen name="dimen_40">40dp</dimen>
     <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_75">75dp</dimen>
     <dimen name="dimen_96">96dp</dimen>
     <dimen name="dimen_176">176dp</dimen>
 
@@ -20,6 +22,6 @@
     <dimen name="city_humidity_text_size_27">27sp</dimen>
     <dimen name="city_temperature_txt_size">88sp</dimen>
 
-
     <fraction name="fraction_09">0.9</fraction>
+    <fraction name="fraction_03">0.3</fraction>
 </resources>
