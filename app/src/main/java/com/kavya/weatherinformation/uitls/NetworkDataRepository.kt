@@ -20,15 +20,16 @@ abstract class NetworkDataRepository<RESULT, REQUEST> {
 
         if (apiResponse.isSuccessful && remotePosts != null) {
             saveRemoteData(remotePosts)
+            emitAll(
+                fetchFromLocal().map {
+                    State.success(it)
+                }
+            )
         } else {
             emit(State.error(apiResponse.message()))
         }
 
-        emitAll(
-            fetchFromLocal().map {
-                State.success(it)
-            }
-        )
+
     }.catch { e ->
         emit(State.error("Network error! Can't get latest weather data."))
         e.printStackTrace()

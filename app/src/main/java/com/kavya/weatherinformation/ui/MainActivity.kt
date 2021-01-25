@@ -52,8 +52,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.navigationView.setNavigationItemSelectedListener(this)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.splashFragment -> {
+                R.id.splashFragment,R.id.searchCurrentWeatherFragment -> {
                     binding.toolbar.visibility = View.GONE
+                }
+                R.id.cityScreenFragment -> {
+                    binding.toolbar.visibility = View.VISIBLE
                 }
             }
         }

@@ -9,10 +9,24 @@
         android:label="SplashFragment" >
         <action
             android:id="@+id/action_splashFragment_to_searchCurrentWeatherFragment"
-            app:destination="@id/searchCurrentWeatherFragment" />
+            app:destination="@id/searchCurrentWeatherFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/splashFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/searchCurrentWeatherFragment"
         android:name="com.kavya.weatherinformation.ui.search.SearchCurrentWeatherFragment"
-        android:label="SearchCurrentWeatherFragment" />
+        android:label="SearchCurrentWeatherFragment" >
+        <action
+            android:id="@+id/action_searchCurrentWeatherFragment_to_cityScreenFragment"
+            app:destination="@id/cityScreenFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/searchCurrentWeatherFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/cityScreenFragment"
+        android:name="com.kavya.weatherinformation.ui.dashboard.CityScreenFragment"
+        android:label="CityScreenFragment" />
 </navigation>

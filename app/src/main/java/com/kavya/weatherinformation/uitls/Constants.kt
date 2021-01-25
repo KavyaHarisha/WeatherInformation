@@ -1,5 +1,10 @@
 package com.kavya.weatherinformation.uitls
 
+import android.content.SharedPreferences
+import com.google.gson.Gson
+import com.kavya.weatherinformation.ui.dashboard.WeatherData
+import com.kavya.weatherinformation.uitls.Constants.Preferences.WEATHER_DATA
+
 object Constants {
     const val GIF_IMG_URL = "https://media.giphy.com/media/KV1s4kSJHaY3m/giphy.gif"
 
@@ -15,5 +20,10 @@ object Constants {
 
     object Preferences {
         const val PREFERENCE_NAME ="weather_preferences"
+        const val WEATHER_DATA ="weather_data_key"
     }
+}
+
+fun setWeatherData(gson: Gson, preferences: SharedPreferences, data: WeatherData) {
+    preferences.edit().putString(WEATHER_DATA, gson.toJson(data).toString()).apply()
 }

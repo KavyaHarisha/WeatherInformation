@@ -43,6 +43,8 @@ class SearchCurrentWeatherFragment :
                 is State.Loading -> binding.searchLoader.visibility = View.VISIBLE
                 is State.Success -> {
                     binding.searchLoader.visibility = View.GONE
+                    mViewModel.storeCurrentWeather(state.data)
+                    navigate(R.id.action_searchCurrentWeatherFragment_to_cityScreenFragment)
                 }
                 is State.Error -> {
                     binding.searchLoader.visibility = View.GONE

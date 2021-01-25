@@ -10,4 +10,5 @@
 
     <color name="textColor">#130E51</color>
     <color name="colorStatusNotConnected">#D32F2F</color>
+    <color name="whiteWithOpacity">#33FFFFFF</color>
 </resources>

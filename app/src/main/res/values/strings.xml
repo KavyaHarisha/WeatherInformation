@@ -5,4 +5,6 @@
     <string name="search_hint">Start typing for find your location…</string>
     <string name="text_no_connectivity">No Connection</string>
     <string name="text_connectivity">Back Online</string>
+    <string name="today">Today</string>
+    <string name="city_humidity">Humidity</string>
 </resources>
